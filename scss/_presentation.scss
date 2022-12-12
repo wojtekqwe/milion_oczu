@@ -1,0 +1,159 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  &__home {
+    @include center-section;
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+  }
+  &__image {
+    flex-basis: 57%;
+    position: relative;
+    overflow: hidden;
+  }
+  &__image-inside {
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+  &__label {
+    align-items: center;
+    background-color: $pink-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+  }
+  &__info {
+    color: $text-color;
+    font-family: $font-text;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 0.9px;
+    line-height: 56px;
+    &--small {
+      color: $text-color;
+      font-family: $font-menu;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 500;
+      letter-spacing: 0.84px;
+      line-height: 18px;
+    }
+  }
+  &__line {
+    background-color: $text-minor-color;
+    height: 2px;
+    margin: 20px 0;
+    width: 15%;
+    &--top {
+      margin: 0;
+      width: 20%;
+    }
+    &--bottom {
+      margin: 0;
+      width: 20%;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-basis: 43%;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    padding-left: 8%;
+  }
+  &__title {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  &__margin {
+    margin: 50px 0;
+  }
+  &__home--reverse {
+    flex-direction: row-reverse;
+    margin-top: 100px;
+  }
+  &__span {
+    position: relative;
+    z-index: 2;
+  }
+  &__btn {
+    position: relative;
+    transition: 0.5s;
+    transition: all 0.5s;
+
+    &:after {
+      content: "";
+      background: $pink-color;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.2s;
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:hover {
+      border: 1px solid $pink-color;
+    }
+  }
+  &__btn--reverse {
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .presentation {
+    &__line {
+      margin: 20px 0;
+    }
+    &__info {
+      font-size: 24px;
+      line-height: 35px;
+      &--small {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .presentation {
+    &__info {
+      font-size: 20px;
+      &--small {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .presentation {
+    &__line {
+      margin: 10px 0;
+    }
+    &__info {
+      font-size: 16px;
+      &--small {
+        font-size: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.second-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 5% auto;
+  width: 53%;
+  &__left {
+    flex-basis: 50%;
+  }
+  &__line {
+    background-color: $text-minor-color;
+    height: 2px;
+    margin: 14% 0 8%;
+    width: 30%;
+  }
+  &__stage {
+    @include font-menu;
+    color: $text-minor-color;
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    line-height: 40px;
+  }
+  &__stage--active {
+    color: $text-color;
+  }
+  &__right {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__description-company {
+    @include font-description;
+  }
+  &__description-author {
+    @include font-description-other;
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .second-info {
+    &__stage {
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+    &__description-company {
+      font-size: 18px;
+    }
+    &__description-author {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .second-info {
+    &__stage {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+    }
+    &__description-company {
+      font-size: 14px;
+      line-height: 30px;
+    }
+    &__description-author {
+      font-size: 12px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .second-info {
+    &__stage {
+      font-size: 10px;
+      letter-spacing: 2px;
+      line-height: 35px;
+    }
+    &__description-company {
+      font-size: 12px;
+      line-height: 25px;
+    }
+    &__description-author {
+      font-size: 10px;
+      line-height: 25px;
+    }
+  }
+}
+
+@media (max-width: $large-breakpoint) {
+  .second-info {
+    &__stage {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      line-height: 30px;
+    }
+    &__description-company {
+      font-size: 10px;
+      line-height: 20px;
+    }
+    &__description-author {
+      font-size: 8px;
+      line-height: 18px;
+    }
+  }
+}

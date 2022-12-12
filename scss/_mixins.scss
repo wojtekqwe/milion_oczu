@@ -1,0 +1,45 @@
+@mixin btn {
+  background-color: $pink-color;
+  border: none;
+  color: $text-color;
+  cursor: pointer;
+  font-family: $font-menu;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: $spacing-text;
+  line-height: 18px;
+  min-width: 176px;
+}
+
+@mixin font-menu {
+  color: $text-color;
+  font-family: $font-menu;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: $spacing-text;
+  text-decoration: none;
+  text-shadow: 0 0 1px $text-minor-color;
+}
+
+@mixin font-description {
+  color: $text-color;
+  font-family: $font-text;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+  line-height: 34px;
+}
+
+@mixin font-description-other {
+  color: $text-color;
+  font-family: $font-menu;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+@mixin center-section {
+  margin: 0 auto;
+  width: 100%;
+}

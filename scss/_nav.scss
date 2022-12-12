@@ -1,0 +1,174 @@
+@import "variables";
+@import "mixins";
+@import "breakpoints";
+
+.nav {
+  @include font-menu;
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  margin: 0 auto;
+  width: 90%;
+
+  &__logo {
+    align-self: center;
+    flex-basis: 15%;
+    height: 65px;
+  }
+  &__items {
+    align-self: center;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    letter-spacing: $spacing-text;
+    list-style-type: none;
+  }
+  &__item {
+    padding: 15px;
+  }
+  &__link {
+    @include font-menu;
+    cursor: pointer;
+    opacity: 0.85;
+    position: relative;
+    transition: all 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+    &:hover::before {
+      width: 50%;
+    }
+    &::before {
+      content: "";
+      background-color: $text-minor-color;
+      bottom: -30%;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transition: 0.3s;
+      transform: translateX(90%);
+      width: 0;
+    }
+  }
+  &__contact {
+    align-self: center;
+    display: flex;
+    flex-basis: 20%;
+  }
+  &__phone {
+    align-self: center;
+    border: 1px solid $border-contact;
+    border-right: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    min-width: 180px;
+    padding: 15px;
+  }
+  &__number {
+    @include font-menu;
+    font-weight: 700;
+  }
+  &__arrow {
+    align-self: center;
+    width: 8%;
+  }
+  &__span {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__btn {
+    position: relative;
+    &:after {
+      content: "";
+      background: white;
+      height: 100%;
+      right: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.3s;
+      width: 0;
+    }
+    &:hover::after {
+      border-left: 1px solid $border-contact;
+      width: 100%;
+    }
+    &:hover {
+      color: $text-color;
+    }
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .nav {
+    height: 80px;
+    &__link {
+      font-size: 12px;
+    }
+    &__logo {
+      height: 60px;
+    }
+    &__phone {
+      min-width: 180px;
+    }
+    &__number {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .nav {
+    height: 70px;
+    &__link {
+      font-size: 10px;
+    }
+    &__logo {
+      height: 50px;
+    }
+    &__phone {
+      min-width: 150px;
+    }
+    &__number {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .nav {
+    height: 50px;
+    &__logo {
+      height: 40px;
+    }
+    &__phone {
+      min-width: 130px;
+      padding: 10px 15px;
+    }
+    &__number {
+      font-size: 8px;
+    }
+  }
+}
+
+@media (max-width: $large-breakpoint) {
+  .nav {
+    &__item {
+      padding: 10px;
+    }
+    &__link {
+      font-size: 8px;
+    }
+    &__logo {
+      height: 30px;
+    }
+    &__phone {
+      min-width: 110px;
+      padding: 10px;
+    }
+    &__number {
+      font-size: 8px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.palace {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 10% 0 5%;
+  &__images {
+    position: relative;
+    height: 90%;
+  }
+  &__main-image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60%;
+    z-index: 1;
+  }
+  &__description {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60%;
+  }
+  &__title {
+    text-align: center;
+    margin: 50px;
+  }
+  &__span {
+    position: relative;
+    z-index: 2;
+  }
+  &__btn {
+    position: relative;
+    transition: all 0.5s;
+
+    &:after {
+      content: "";
+      background: $text-footer-color;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.2s;
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:hover {
+      letter-spacing: 3px;
+    }
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .palace {
+    &__title {
+      margin: 2% 0;
+    }
+  }
+}

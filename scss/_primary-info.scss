@@ -1,0 +1,97 @@
+.primary-info {
+  text-align: center;
+  &__logo {
+    height: 50vh;
+    position: relative;
+  }
+  &__logo-image {
+    left: 50%;
+    height: 35%;
+    position: absolute;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    text-align: center;
+  }
+  &__span {
+    position: relative;
+    z-index: 2;
+  }
+  &__btn {
+    padding: 22px 35px;
+    margin: 0 0 70px;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    transition: all 0.5s;
+
+    &:after {
+      content: "";
+      background: white;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transition: 0.2s;
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:hover {
+      letter-spacing: 3px;
+    }
+  }
+
+  &__image {
+    background-image: url("../images/KADR_04_3@2x.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    height: 100%;
+  }
+  &__main-image {
+    height: 80vh;
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .primary-info {
+    &__btn {
+      padding: 18px 30px;
+      margin: 0px 0px 60px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .primary-info {
+    &__logo {
+      height: 42vh;
+    }
+    &__btn {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .primary-info {
+    &__btn {
+      font-size: 10px;
+      padding: 12px 28px;
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .primary-info {
+    &__btn {
+      font-size: 9px;
+      padding: 10px 25px;
+    }
+  }
+}

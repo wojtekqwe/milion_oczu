@@ -1,0 +1,154 @@
+.logo {
+  background: transparent url("../images/nowe_historie_logo_decoartive@2x.png")
+    no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.btn {
+  @include btn;
+  &--find-home {
+    background-color: transparent;
+    border: 1px solid $text-minor-color;
+    margin: 30px 0 60px;
+    padding: 15px 30px;
+  }
+  &--palace {
+    font-size: 16px;
+    margin: 0 auto;
+    min-height: auto;
+    padding: 25px 30px;
+  }
+}
+
+.title {
+  &__main {
+    color: $text-minor-color;
+    font-family: $font-subtitle;
+    font-size: 30px;
+    opacity: 50%;
+    &--margin {
+      margin-bottom: 25px;
+    }
+    &--smaller-font {
+      font-size: 26px;
+    }
+  }
+  &__minor {
+    color: $text-color;
+    font-family: $font-text;
+    font-size: 30px;
+    letter-spacing: 6px;
+    line-height: 42px;
+    text-transform: uppercase;
+    &--margin {
+      margin-bottom: 30px;
+      line-height: 42px;
+    }
+    &--small {
+      font-size: 20px;
+      letter-spacing: 4px;
+      line-height: 29px;
+      margin-top: 32%;
+      margin-bottom: auto;
+    }
+  }
+}
+
+@media (max-width: $xxxlarge-breakpoint) {
+  .btn {
+    font-size: 12px;
+    &--palace {
+      padding: 20px 30px;
+    }
+  }
+  .title {
+    &__main {
+      font-size: 24px;
+    }
+    &__minor {
+      font-size: 24px;
+      &--margin {
+        line-height: 35px;
+      }
+      &--small {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xxlarge-breakpoint) {
+  .btn {
+    font-size: 10px;
+    min-width: 150px;
+    &--palace {
+      font-size: 12px;
+      padding: 15px 30px;
+    }
+  }
+  .title {
+    &__main {
+      font-size: 18px;
+    }
+    &__minor {
+      font-size: 18px;
+      line-height: 28px;
+      &--small {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: $xlarge-breakpoint) {
+  .btn {
+    font-size: 8px;
+    min-width: 130px;
+    &--find-home {
+      padding: 10px 30px;
+    }
+    &--palace {
+      font-size: 10px;
+      padding: 12px 25px;
+    }
+  }
+  .title {
+    &__main {
+      font-size: 16px;
+    }
+    &__minor {
+      font-size: 14px;
+      line-height: 24px;
+      &--small {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width: $large-breakpoint) {
+  .btn {
+    font-size: 7px;
+    min-width: 110px;
+    &--find-home {
+      padding: 6px 22px;
+    }
+    &--palace {
+      font-size: 9px;
+      padding: 10px 25px;
+    }
+  }
+  .title {
+    &__main {
+      font-size: 14px;
+    }
+    &__minor {
+      font-size: 12px;
+      line-height: 20px;
+      &--small {
+        font-size: 9px;
+      }
+    }
+  }
+}

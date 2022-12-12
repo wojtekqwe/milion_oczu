@@ -1,0 +1,81 @@
+.gallery {
+  display: flex;
+  position: relative;
+  width: 100%;
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  &__home {
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+  }
+  &__image {
+    transition: all 1s;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &:hover {
+      transform: scale(1.15) rotate(3deg);
+    }
+    &--right {
+      &:hover {
+        transform: scale(1.15) rotate(-3deg);
+      }
+    }
+  }
+  &__title-label {
+    background-color: white;
+    bottom: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    left: 75%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    &--left {
+      right: 75%;
+      left: 0;
+    }
+  }
+  &__btn {
+    background-color: transparent;
+    font-weight: 700;
+    height: 30%;
+
+    position: relative;
+    transition: all 0.2s;
+    &:hover {
+      opacity: 0.85;
+    }
+    &:hover::before {
+      width: 50%;
+    }
+    &::before {
+      content: "";
+      background-color: $text-minor-color;
+      bottom: 25%;
+      height: 3px;
+      left: 25%;
+      position: absolute;
+      transition: 0.3s;
+      width: 0;
+    }
+  }
+  &__line {
+    position: absolute;
+    top: 37%;
+    left: 100%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 3px;
+    background-color: $text-minor-color;
+  }
+}
